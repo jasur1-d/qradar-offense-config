@@ -23,4 +23,4 @@ jobs:
         env:
           QRADAR_IP: ${{ secrets.QRADAR_IP }}
           QRADAR_TOKEN: ${{ secrets.QRADAR_TOKEN }}
-        run: python sync_rules.py
+        run: python rules/sync_rules.py
