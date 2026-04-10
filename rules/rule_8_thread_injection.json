@@ -1,0 +1,13 @@
+{
+  "name": "SOC-Rule-08: Remote Thread Injection Detected",
+  "description": "Detection of code injection from one process to another",
+  "severity": "Critical",
+  "logic": {
+    "device_type": "Microsoft Windows / Sysmon",
+    "event_id": 8,
+    "conditions": [
+      "SourceImage != TargetImage"
+    ]
+  },
+  "offense_category": "Privilege Escalation"
+}
