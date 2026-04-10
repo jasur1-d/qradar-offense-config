@@ -1,0 +1,14 @@
+{
+  "name": "SOC-Rule-04: Registry Persistence via Run Keys",
+  "description": "Detection of new programs added to Windows Startup registry",
+  "severity": "High",
+  "logic": {
+    "device_type": "Microsoft Windows",
+    "event_id": 13,
+    "conditions": [
+      "TargetObject contains '\\Software\\Microsoft\\Windows\\CurrentVersion\\Run'",
+      "Details != 'null'"
+    ]
+  },
+  "offense_category": "Persistence"
+}
