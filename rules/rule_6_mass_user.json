@@ -1,0 +1,14 @@
+{
+  "name": "SOC-Rule-06: Rapid Successive User Creation",
+  "description": "Multiple user accounts created in a short timeframe",
+  "severity": "High",
+  "logic": {
+    "device_type": "Microsoft Windows",
+    "event_id": 4720,
+    "threshold": {
+      "count": 3,
+      "time_window": "300s"
+    }
+  },
+  "offense_category": "Resource Hijacking"
+}
