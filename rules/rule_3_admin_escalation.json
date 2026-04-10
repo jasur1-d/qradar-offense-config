@@ -1,0 +1,14 @@
+{
+  "name": "SOC-Rule-03: User Added to Administrators Group",
+  "description": "Detection of a user being added to the local administrators group",
+  "severity": "Critical",
+  "logic": {
+    "device_type": "Microsoft Windows",
+    "event_id": 4732,
+    "conditions": [
+      "TargetUserName != 'Administrator'",
+      "GroupName == 'Administrators'"
+    ]
+  },
+  "offense_category": "Privilege Escalation"
+}
