@@ -1,0 +1,13 @@
+{
+  "name": "SOC-Rule-07: Windows Firewall Disabled",
+  "description": "Detection of Windows Firewall being turned off",
+  "severity": "Medium",
+  "logic": {
+    "device_type": "Microsoft Windows",
+    "event_id": 4950,
+    "conditions": [
+      "SettingValue == 'Disabled'"
+    ]
+  },
+  "offense_category": "Defense Evasion"
+}
