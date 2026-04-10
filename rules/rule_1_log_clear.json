@@ -1,0 +1,14 @@
+{
+  "name": "SOC-Rule-01: Windows Event Log Cleared",
+  "description": "Detection of manual log deletion using wevtutil or PowerShell",
+  "severity": "High",
+  "logic": {
+    "device_type": "Microsoft Windows",
+    "event_id": 104,
+    "conditions": [
+      "CommandLine contains 'wevtutil' AND CommandLine contains 'cl'",
+      "CommandLine contains 'Clear-EventLog'"
+    ]
+  },
+  "offense_category": "Adversary Anti-Forensics"
+}
