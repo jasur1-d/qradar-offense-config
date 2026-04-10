@@ -1,0 +1,13 @@
+{
+  "name": "SOC-Rule-09: New Scheduled Task Created",
+  "description": "Detection of suspicious scheduled tasks for persistence",
+  "severity": "Medium",
+  "logic": {
+    "device_type": "Microsoft Windows",
+    "event_id": 4698,
+    "conditions": [
+      "TaskName contains 'Update' OR TaskName contains 'Svc'"
+    ]
+  },
+  "offense_category": "Persistence"
+}
