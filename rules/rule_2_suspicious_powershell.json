@@ -1,0 +1,14 @@
+{
+  "name": "SOC-Rule-02: Suspicious PowerShell Download",
+  "description": "Detection of PowerShell commands used to download files from internet",
+  "severity": "High",
+  "logic": {
+    "device_type": "Microsoft Windows",
+    "event_id": 4104,
+    "conditions": [
+      "ScriptBlockText contains 'Net.WebClient' OR ScriptBlockText contains 'DownloadString'",
+      "ScriptBlockText contains 'Invoke-WebRequest' OR ScriptBlockText contains 'iwr'"
+    ]
+  },
+  "offense_category": "Execution: Command and Scripting Interpreter"
+}
