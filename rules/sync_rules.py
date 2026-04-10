@@ -9,7 +9,7 @@ RULES_DIR = 'rules/'
 
 def deploy_to_qradar(rule_data):
     # QRadar API endpointi (Nümunə: analytics/rules)
-    url = f"https://{QRADAR_IP}/api/staged_config/event_rules"
+    url = f"https://{QRADAR_IP}/api/analytics/rules"
     headers = {
         'SEC': QRADAR_TOKEN,
         'Content-Type': 'application/json',
