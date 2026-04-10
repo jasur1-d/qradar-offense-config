@@ -1,0 +1,13 @@
+{
+  "name": "SOC-Rule-10: Successful Login after Multiple Failures",
+  "description": "Detection of successful login following multiple failed attempts",
+  "severity": "High",
+  "logic": {
+    "device_type": "Microsoft Windows",
+    "sequence": [
+      {"event_id": 4625, "count": 5},
+      {"event_id": 4624, "count": 1}
+    ]
+  },
+  "offense_category": "Credential Access"
+}
