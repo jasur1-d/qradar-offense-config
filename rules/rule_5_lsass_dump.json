@@ -1,0 +1,14 @@
+{
+  "name": "SOC-Rule-05: Potential Credential Dumping via LSASS",
+  "description": "Detection of suspicious access to lsass.exe process memory",
+  "severity": "Critical",
+  "logic": {
+    "device_type": "Microsoft Windows / Sysmon",
+    "event_id": 10,
+    "conditions": [
+      "TargetImage contains 'lsass.exe'",
+      "GrantedAccess == '0x1fffff' OR GrantedAccess == '0x1010'"
+    ]
+  },
+  "offense_category": "Credential Access"
+}
